@@ -8,7 +8,7 @@ namespace Zoologico_Manager
     {
         //atributos
         private string colorPlumas;
-
+       
 
         //constructor
         public Loro(string nombre, int edad, int salud, int hambre, string colorPlumas) :
@@ -19,12 +19,12 @@ namespace Zoologico_Manager
         //metodos que hereda desde animal 
         public override void EmitirSonido()
         {
-            base.EmitirSonido();
+            //sonido especial del loro
             MessageBox.Show($"{Nombre} emite un sonido de loro: ¡Hola!");
         }
         public override void Alimentar()
         {
-            base.Alimentar();
+           
             this.Hambre -= 5; // reducir el hambre al alimentar al loro
             this.Salud += 3; // aumentar la salud al alimentar al loro
             MessageBox.Show($"{Nombre} se alimenta de semillas y frutas.");

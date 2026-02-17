@@ -21,13 +21,12 @@ namespace Zoologico_Manager
         //metodos que hereda desde animal 
         public override void EmitirSonido()
         {
-            base.EmitirSonido();
+            //sonido especial del elefante
             MessageBox.Show($"{Nombre} emite un sonido de elefante: Ruuuu");
         }
 
         public override void Alimentar()
         {
-            base.Alimentar();
             this.Hambre -= 20; // reducir el hambre al alimentar al elefante
             this.Salud += 10; // aumentar la salud al alimentar al elefante
             MessageBox.Show($"{Nombre} se alimenta de hierba y frutas.");

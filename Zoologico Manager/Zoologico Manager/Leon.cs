@@ -17,12 +17,11 @@ namespace Zoologico_Manager
         //metodos que hereda desde animal 
         public override void EmitirSonido()
         {
-            base.EmitirSonido();
-            MessageBox.Show($"{Nombre} emite un sonido de león: ¡Rugido!");
+            //sonido especial del leon
+            MessageBox.Show($"{Nombre} emite un sonido de león: ¡Rauw!");
         }
         public override void Alimentar()
         {
-            base.Alimentar();
             this.Hambre -= 25; // reducir el hambre al alimentar al león
             this.Salud += 15; // aumentar la salud al alimentar al león
             MessageBox.Show($"{Nombre} se alimenta de carne.");

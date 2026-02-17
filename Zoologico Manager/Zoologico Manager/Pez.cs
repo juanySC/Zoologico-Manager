@@ -19,12 +19,12 @@ namespace Zoologico_Manager
         //metodos que hereda desde animal 
         public override void EmitirSonido()
         {
-            base.EmitirSonido();
-            MessageBox.Show($"{Nombre} emite un sonido de pez: Blub blub");
+            //sonido exclusivo del pez
+            MessageBox.Show($"{Nombre} emite un sonido de pez: glu glu");
         }
         public override void Alimentar()
         {
-            base.Alimentar();
+            
             this.Hambre -= 10; // reducir el hambre al alimentar al pez
             this.Salud += 5; // aumentar la salud al alimentar al pez
             MessageBox.Show($"{Nombre} se alimenta de algas y pequeños insectos.");
