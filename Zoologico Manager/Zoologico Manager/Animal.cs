@@ -5,6 +5,7 @@ using System.Text;
 
 namespace Zoologico_Manager
 {
+    //clase padre
     internal class Animal
     {
 
@@ -17,38 +18,72 @@ namespace Zoologico_Manager
         //constructor
         public Animal(string nombre, int edad, int salud, int hambre)
         {
-            this.nombre = nombre;
-            this.edad = edad;
-            this.salud = salud; // salud inicial
-            this.hambre = hambre;  
+            this.Nombre = nombre;
+            this.Edad = edad;
+            this.Salud = salud; // salud inicial
+            this.Hambre = hambre;  
         }
 
         //metodos
         public virtual void EmitirSonido()
         {
-            Console.WriteLine($"{nombre} hace un sonido.");
+            MessageBox.Show($"{Nombre} emite un sonido.");
         }
 
         public virtual void Alimentar()
         {
 
-            MessageBox.Show($"Alimentando a {nombre}...");
-            hambre -= 20; // reducir el hambre al alimentar
-            salud += 10; // aumentar la salud al alimentar
+            this.Hambre -= 15; // reducir el hambre al alimentar
+            this.Salud += 5; // aumentar la salud al alimentar
+            MessageBox.Show($"Alimentando a {Nombre}...");
 
         }
 
         //getters and setters
-        public string Nombre
+        public string Nombre{ get { return nombre; } set { nombre = value; } }
+
+        public int Edad{ get {return edad; } set {edad = value; } }
+
+        //modifico salud ya que se necesita para poder alimentar al animal 
+        public int Salud
         {
-            get { return nombre; }
-            set { nombre = value; }
+            get { return salud; }
+            set { 
+                //condicion para que permanezca entre 0 y 100
+                if (value < 0)
+                {
+                    salud = 0;
+                }
+                else if (value > 100)
+                {
+                    salud = 100;
+                }
+                else
+                {
+                    salud = value;
+                }
+            }
         }
 
-        public int Edad
+        //dependiendo del hambre del animal se podra alimentar o no
+        public int Hambre
         {
-            get { return edad; }
-            set { edad = value; }
+            get { return hambre; }
+            set {
+                //condiciones para que permanezca entre 0 y 100
+                if (value < 0)
+                {
+                    hambre = 0;
+                }
+                else if (value > 100)
+                {
+                    hambre = 100;
+                }
+                else
+                {
+                    hambre = value;
+                }
+            }
         }
 
     }

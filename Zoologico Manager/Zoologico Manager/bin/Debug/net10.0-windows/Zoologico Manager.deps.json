@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "Zoologico Manager/1.0.0": {
+        "runtime": {
+          "Zoologico Manager.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Zoologico Manager/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

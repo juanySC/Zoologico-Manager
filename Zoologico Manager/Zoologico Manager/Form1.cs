@@ -6,5 +6,10 @@ namespace Zoologico_Manager
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
