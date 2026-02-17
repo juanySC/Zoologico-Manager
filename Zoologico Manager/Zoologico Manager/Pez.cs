@@ -4,17 +4,16 @@ using System.Text;
 
 namespace Zoologico_Manager
 {
-    internal class Pez: Animal
+    public class Pez: Animal
     {
 
-        //atributos
-                private string tipoAgua;
+      
 
         //constructor
-        public Pez(string nombre, int edad, int salud, int hambre, string tipoAgua) :
+        public Pez(string nombre, int edad, int salud, int hambre) :
             base(nombre, edad, salud, hambre)
         {
-            this.tipoAgua = tipoAgua;
+           
         }
         //metodos que hereda desde animal 
         public override void EmitirSonido()
@@ -29,7 +28,6 @@ namespace Zoologico_Manager
             this.Salud += 5; // aumentar la salud al alimentar al pez
             MessageBox.Show($"{Nombre} se alimenta de algas y pequeños insectos.");
         }
-        //getters and setters
-        public string TipoAgua { get { return tipoAgua; } set { tipoAgua = value; } }
+       
     }
 }

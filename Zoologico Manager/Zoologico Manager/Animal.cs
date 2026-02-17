@@ -6,7 +6,7 @@ using System.Text;
 namespace Zoologico_Manager
 {
     //clase padre
-    internal class Animal
+    public class Animal
     {
 
         //atributos

@@ -4,15 +4,14 @@ using System.Text;
 
 namespace Zoologico_Manager
 {
-    internal class Leon: Animal
+    public class Leon: Animal
     {
-        //atributos
-        private int largoMelena;
+        
         //constructor
-        public Leon(string nombre, int edad, int salud, int hambre, int largoMelena) :
+        public Leon(string nombre, int edad, int salud, int hambre) :
             base(nombre, edad, salud, hambre)
         {
-            this.largoMelena = largoMelena;
+         
         }
         //metodos que hereda desde animal 
         public override void EmitirSonido()
@@ -26,23 +25,6 @@ namespace Zoologico_Manager
             this.Salud += 15; // aumentar la salud al alimentar al león
             MessageBox.Show($"{Nombre} se alimenta de carne.");
         }
-        //getters and setters
-        public int LargoMelena { get { return largoMelena; } 
-            set { 
-                //restingiendo largo de melena
-                if (value < 0)
-                {
-                    largoMelena = 0;
-                }
-                else if (value > 50)
-                {
-                    largoMelena = 50;
-                }
-                else
-                {
-                    largoMelena = value;
-                }
-            }
-        }
+        
     }
 }

@@ -5,18 +5,15 @@ using System.Text;
 namespace Zoologico_Manager
 {
     //herencia desde animal y hereda sus metodos y atributos
-    internal class Elefante: Animal
+    public class Elefante: Animal
     {
-        //atributos
-        private int largoColmillos;
-        private int largoTrompa;
+      
 
         //constructor
-        public Elefante(string nombre, int edad, int salud, int hambre, int largoColmillos, int largoTrompa) :
+        public Elefante(string nombre, int edad, int salud, int hambre) :
             base(nombre, edad, salud, hambre)  
         {
-            this.largoColmillos = largoColmillos;
-            this.largoTrompa = largoTrompa;
+            
         }
         //metodos que hereda desde animal 
         public override void EmitirSonido()
@@ -32,38 +29,7 @@ namespace Zoologico_Manager
             MessageBox.Show($"{Nombre} se alimenta de hierba y frutas.");
         }
 
-        //getters and setters
-        public int LargoColmillos { get { return largoColmillos; }
-            set { 
-                //restingiendo largo del colmillo
-                if (value < 0)
-                {
-                    largoColmillos = 0;
-                }
-                else if (value > 30)
-                {
-                    largoColmillos = 30;
-                }
-                else
-                {
-                    largoColmillos = value;
-                }
-            } }
-        public int LargoTrompa { get { return largoTrompa; } 
-            set { 
-                //restriengiendo largo de trompa
-                if (value < 0)
-                {
-                    largoTrompa = 0;
-                }
-                else if (value > 25)
-                {
-                    largoTrompa = 25;
-                }
-                else
-                {
-                    largoTrompa = value;
-                }
-            } }
+       
+        
     }
 }

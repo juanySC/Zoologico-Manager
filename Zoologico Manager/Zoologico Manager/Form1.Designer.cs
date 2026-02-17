@@ -121,6 +121,7 @@
             buttonBuscarAnimal.TabIndex = 9;
             buttonBuscarAnimal.Text = "Buscar Animal";
             buttonBuscarAnimal.UseVisualStyleBackColor = true;
+            buttonBuscarAnimal.Click += buttonBuscarAnimal_Click;
             // 
             // buttonVisualizarAnimal
             // 
@@ -130,6 +131,7 @@
             buttonVisualizarAnimal.TabIndex = 10;
             buttonVisualizarAnimal.Text = "Mostrar Animal";
             buttonVisualizarAnimal.UseVisualStyleBackColor = true;
+            buttonVisualizarAnimal.Click += buttonVisualizarAnimal_Click;
             // 
             // labelContadorAnimal
             // 
