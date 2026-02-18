@@ -17,10 +17,10 @@ namespace Zoologico_Manager
             
         }
         //metodos que hereda desde animal 
-        public override void EmitirSonido()
+        public override string EmitirSonido()
         {
             //sonido especial del loro
-            MessageBox.Show($"{Nombre} emite un sonido de loro: ¡Hola!");
+            return $"{Nombre} emite un sonido de loro: ¡Hola!";
         }
         public override void Alimentar()
         {

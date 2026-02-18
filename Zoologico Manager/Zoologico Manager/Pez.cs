@@ -16,10 +16,10 @@ namespace Zoologico_Manager
            
         }
         //metodos que hereda desde animal 
-        public override void EmitirSonido()
+        public override string EmitirSonido()
         {
             //sonido exclusivo del pez
-            MessageBox.Show($"{Nombre} emite un sonido de pez: glu glu");
+            return $"{Nombre} emite un sonido de pez: glu glu";
         }
         public override void Alimentar()
         {

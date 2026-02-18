@@ -16,10 +16,10 @@ namespace Zoologico_Manager
             
         }
         //metodos que hereda desde animal 
-        public override void EmitirSonido()
+        public override string EmitirSonido()
         {
             //sonido especial del elefante
-            MessageBox.Show($"{Nombre} emite un sonido de elefante: Ruuuu");
+            return $"{Nombre} emite un sonido de elefante: Ruuuu";
         }
 
         public override void Alimentar()

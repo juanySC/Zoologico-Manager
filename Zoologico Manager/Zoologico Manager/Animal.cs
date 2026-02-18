@@ -25,9 +25,9 @@ namespace Zoologico_Manager
         }
 
         //metodos
-        public virtual void EmitirSonido()
+        public virtual string EmitirSonido()
         {
-            MessageBox.Show($"{Nombre} emite un sonido.");
+            return $"{Nombre} emite un sonido.";
         }
 
         public virtual void Alimentar()

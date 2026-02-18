@@ -162,6 +162,7 @@
             labelControlConteoAnimal.Size = new Size(23, 25);
             labelControlConteoAnimal.TabIndex = 12;
             labelControlConteoAnimal.Text = "0";
+            labelControlConteoAnimal.Click += labelControlConteoAnimal_Click;
             // 
             // Form1
             // 

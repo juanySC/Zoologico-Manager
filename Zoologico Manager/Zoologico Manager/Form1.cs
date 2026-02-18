@@ -108,5 +108,10 @@ namespace Zoologico_Manager
         {
 
         }
+
+        private void labelControlConteoAnimal_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

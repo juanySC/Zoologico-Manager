@@ -14,10 +14,10 @@ namespace Zoologico_Manager
          
         }
         //metodos que hereda desde animal 
-        public override void EmitirSonido()
+        public override string EmitirSonido()
         {
             //sonido especial del leon
-            MessageBox.Show($"{Nombre} emite un sonido de león: ¡Rauw!");
+            return $"{Nombre} emite un sonido de león: ¡Rauw!";
         }
         public override void Alimentar()
         {
