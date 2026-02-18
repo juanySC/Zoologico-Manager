@@ -36,8 +36,8 @@ namespace Zoologico_Manager
             }
 
             //obtengo los datos para que el animal se cree con todos los campos 
-            if ((textBoxNombreAnimal.Text == "") || (textBoxEdadAnimal.Text == "")) 
-            { 
+            if ((textBoxNombreAnimal.Text == "") || (textBoxEdadAnimal.Text == ""))
+            {
                 MessageBox.Show("Por favor, complete todos los campos para agregar un animal.");
                 return;
             }
@@ -49,19 +49,19 @@ namespace Zoologico_Manager
             //creo el animal dependiendo del tipo seleccionado
             Animal nuevoAnimal = null;
 
-            switch(tipo)
+            switch (tipo)
             {
                 case "Leon":
                     nuevoAnimal = new Leon(nombre, edad, 25, 15);
                     break;
                 case "Elefante":
-                    nuevoAnimal = new Elefante(nombre, edad,20,10);
+                    nuevoAnimal = new Elefante(nombre, edad, 20, 10);
                     break;
                 case "Pez":
-                    nuevoAnimal = new Pez(nombre, edad,10,5);
+                    nuevoAnimal = new Pez(nombre, edad, 10, 5);
                     break;
                 case "Loro":
-                    nuevoAnimal = new Pez(nombre, edad, 5, 3);
+                    nuevoAnimal = new Loro(nombre, edad, 5, 3);
                     break;
                 default:
                     MessageBox.Show("Tipo de animal no reconocido.");
@@ -86,9 +86,15 @@ namespace Zoologico_Manager
 
         private void buttonVisualizarAnimal_Click(object sender, EventArgs e)
         {
+            //oculto el formulario actual para mostrar el nuevo formulario
             this.Hide();
-            FormVisualizarAnimal formVisualizarAnimal = new FormVisualizarAnimal();
-            formVisualizarAnimal.Show();
+            FormVisualizarAnimal formVisualizarAnimal = new FormVisualizarAnimal(animales, contadorAnimales);
+
+            //para que la informacion de la otra ventana no lo borre al regresar
+            formVisualizarAnimal.ShowDialog();
+
+            //muestro de nuevo el formulario original
+            this.Show();
         }
 
         private void buttonBuscarAnimal_Click(object sender, EventArgs e)
@@ -96,6 +102,11 @@ namespace Zoologico_Manager
             this.Hide();
             FormBuscarAnimal formBuscarAnimal = new FormBuscarAnimal();
             formBuscarAnimal.Show();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

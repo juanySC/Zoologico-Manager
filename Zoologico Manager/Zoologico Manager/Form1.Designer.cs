@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             comboBoxTipoAnimal = new ComboBox();
             labelTitulo = new Label();
             labelElegirAnimal = new Label();
@@ -46,7 +47,7 @@
             // 
             comboBoxTipoAnimal.FormattingEnabled = true;
             comboBoxTipoAnimal.Items.AddRange(new object[] { "Leon", "Loro", "Pez", "Elefante" });
-            comboBoxTipoAnimal.Location = new Point(207, 88);
+            comboBoxTipoAnimal.Location = new Point(250, 96);
             comboBoxTipoAnimal.Name = "comboBoxTipoAnimal";
             comboBoxTipoAnimal.Size = new Size(144, 23);
             comboBoxTipoAnimal.TabIndex = 0;
@@ -64,15 +65,16 @@
             // labelElegirAnimal
             // 
             labelElegirAnimal.AutoSize = true;
-            labelElegirAnimal.Location = new Point(21, 91);
+            labelElegirAnimal.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelElegirAnimal.Location = new Point(29, 91);
             labelElegirAnimal.Name = "labelElegirAnimal";
-            labelElegirAnimal.Size = new Size(89, 15);
+            labelElegirAnimal.Size = new Size(148, 25);
             labelElegirAnimal.TabIndex = 2;
             labelElegirAnimal.Text = "Eliga el animal: ";
             // 
             // textBoxNombreAnimal
             // 
-            textBoxNombreAnimal.Location = new Point(207, 153);
+            textBoxNombreAnimal.Location = new Point(250, 161);
             textBoxNombreAnimal.Name = "textBoxNombreAnimal";
             textBoxNombreAnimal.Size = new Size(144, 23);
             textBoxNombreAnimal.TabIndex = 3;
@@ -80,15 +82,16 @@
             // labelNombreAnimal
             // 
             labelNombreAnimal.AutoSize = true;
+            labelNombreAnimal.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelNombreAnimal.Location = new Point(21, 161);
             labelNombreAnimal.Name = "labelNombreAnimal";
-            labelNombreAnimal.Size = new Size(109, 15);
+            labelNombreAnimal.Size = new Size(182, 25);
             labelNombreAnimal.TabIndex = 4;
             labelNombreAnimal.Text = "Nombre de animal:";
             // 
             // textBoxEdadAnimal
             // 
-            textBoxEdadAnimal.Location = new Point(207, 216);
+            textBoxEdadAnimal.Location = new Point(250, 224);
             textBoxEdadAnimal.Name = "textBoxEdadAnimal";
             textBoxEdadAnimal.Size = new Size(144, 23);
             textBoxEdadAnimal.TabIndex = 5;
@@ -96,58 +99,67 @@
             // labelEdadAnimal
             // 
             labelEdadAnimal.AutoSize = true;
+            labelEdadAnimal.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelEdadAnimal.Location = new Point(21, 224);
             labelEdadAnimal.Name = "labelEdadAnimal";
-            labelEdadAnimal.Size = new Size(97, 15);
+            labelEdadAnimal.Size = new Size(162, 25);
             labelEdadAnimal.TabIndex = 6;
             labelEdadAnimal.Text = "Edad del animal: ";
             labelEdadAnimal.Click += label1_Click;
             // 
             // buttonAgregarAnimal
             // 
-            buttonAgregarAnimal.Location = new Point(524, 183);
+            buttonAgregarAnimal.BackColor = SystemColors.MenuHighlight;
+            buttonAgregarAnimal.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttonAgregarAnimal.Location = new Point(250, 361);
             buttonAgregarAnimal.Name = "buttonAgregarAnimal";
-            buttonAgregarAnimal.Size = new Size(144, 23);
+            buttonAgregarAnimal.Size = new Size(168, 45);
             buttonAgregarAnimal.TabIndex = 7;
             buttonAgregarAnimal.Text = "Agregar Animal";
-            buttonAgregarAnimal.UseVisualStyleBackColor = true;
+            buttonAgregarAnimal.UseVisualStyleBackColor = false;
             buttonAgregarAnimal.Click += buttonAgregarAnimal_Click;
             // 
             // buttonBuscarAnimal
             // 
-            buttonBuscarAnimal.Location = new Point(524, 238);
+            buttonBuscarAnimal.BackColor = SystemColors.MenuHighlight;
+            buttonBuscarAnimal.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttonBuscarAnimal.Location = new Point(524, 208);
             buttonBuscarAnimal.Name = "buttonBuscarAnimal";
-            buttonBuscarAnimal.Size = new Size(144, 23);
+            buttonBuscarAnimal.Size = new Size(175, 39);
             buttonBuscarAnimal.TabIndex = 9;
             buttonBuscarAnimal.Text = "Buscar Animal";
-            buttonBuscarAnimal.UseVisualStyleBackColor = true;
+            buttonBuscarAnimal.UseVisualStyleBackColor = false;
             buttonBuscarAnimal.Click += buttonBuscarAnimal_Click;
             // 
             // buttonVisualizarAnimal
             // 
+            buttonVisualizarAnimal.BackColor = SystemColors.MenuHighlight;
+            buttonVisualizarAnimal.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonVisualizarAnimal.Location = new Point(524, 119);
             buttonVisualizarAnimal.Name = "buttonVisualizarAnimal";
-            buttonVisualizarAnimal.Size = new Size(144, 23);
+            buttonVisualizarAnimal.Size = new Size(175, 40);
             buttonVisualizarAnimal.TabIndex = 10;
             buttonVisualizarAnimal.Text = "Mostrar Animal";
-            buttonVisualizarAnimal.UseVisualStyleBackColor = true;
+            buttonVisualizarAnimal.UseVisualStyleBackColor = false;
             buttonVisualizarAnimal.Click += buttonVisualizarAnimal_Click;
             // 
             // labelContadorAnimal
             // 
             labelContadorAnimal.AutoSize = true;
+            labelContadorAnimal.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelContadorAnimal.Location = new Point(21, 281);
             labelContadorAnimal.Name = "labelContadorAnimal";
-            labelContadorAnimal.Size = new Size(123, 15);
+            labelContadorAnimal.Size = new Size(206, 25);
             labelContadorAnimal.TabIndex = 11;
             labelContadorAnimal.Text = "Contador de animales";
             // 
             // labelControlConteoAnimal
             // 
             labelControlConteoAnimal.AutoSize = true;
-            labelControlConteoAnimal.Location = new Point(250, 281);
+            labelControlConteoAnimal.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelControlConteoAnimal.Location = new Point(298, 281);
             labelControlConteoAnimal.Name = "labelControlConteoAnimal";
-            labelControlConteoAnimal.Size = new Size(13, 15);
+            labelControlConteoAnimal.Size = new Size(23, 25);
             labelControlConteoAnimal.TabIndex = 12;
             labelControlConteoAnimal.Text = "0";
             // 
@@ -155,6 +167,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(800, 450);
             Controls.Add(labelControlConteoAnimal);
             Controls.Add(labelContadorAnimal);
@@ -169,7 +182,8 @@
             Controls.Add(labelTitulo);
             Controls.Add(comboBoxTipoAnimal);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Zoologico";
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }

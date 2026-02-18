@@ -28,57 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            buttonSonido = new Button();
-            buttonAlimentar = new Button();
-            buttonDetalle = new Button();
+            buttonRegresar = new Button();
+            listBoxListaAnimales = new ListBox();
             SuspendLayout();
             // 
-            // buttonSonido
+            // buttonRegresar
             // 
-            buttonSonido.Location = new Point(217, 335);
-            buttonSonido.Name = "buttonSonido";
-            buttonSonido.Size = new Size(75, 23);
-            buttonSonido.TabIndex = 0;
-            buttonSonido.Text = "Sonido";
-            buttonSonido.UseVisualStyleBackColor = true;
+            buttonRegresar.BackColor = SystemColors.MenuHighlight;
+            buttonRegresar.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttonRegresar.Location = new Point(331, 356);
+            buttonRegresar.Name = "buttonRegresar";
+            buttonRegresar.Size = new Size(121, 41);
+            buttonRegresar.TabIndex = 0;
+            buttonRegresar.Text = "Regresar";
+            buttonRegresar.UseVisualStyleBackColor = false;
+            buttonRegresar.Click += buttonRegresar_Click;
             // 
-            // buttonAlimentar
+            // listBoxListaAnimales
             // 
-            buttonAlimentar.Location = new Point(317, 335);
-            buttonAlimentar.Name = "buttonAlimentar";
-            buttonAlimentar.Size = new Size(75, 23);
-            buttonAlimentar.TabIndex = 1;
-            buttonAlimentar.Text = "Alimentar";
-            buttonAlimentar.UseVisualStyleBackColor = true;
-            // 
-            // buttonDetalle
-            // 
-            buttonDetalle.Location = new Point(433, 338);
-            buttonDetalle.Name = "buttonDetalle";
-            buttonDetalle.Size = new Size(86, 23);
-            buttonDetalle.TabIndex = 2;
-            buttonDetalle.Text = "Detalles";
-            buttonDetalle.TextAlign = ContentAlignment.BottomLeft;
-            buttonDetalle.UseVisualStyleBackColor = true;
-            buttonDetalle.Click += buttonDetalle_Click;
+            listBoxListaAnimales.FormattingEnabled = true;
+            listBoxListaAnimales.Location = new Point(159, 57);
+            listBoxListaAnimales.Name = "listBoxListaAnimales";
+            listBoxListaAnimales.Size = new Size(463, 259);
+            listBoxListaAnimales.TabIndex = 1;
             // 
             // FormVisualizarAnimal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(buttonDetalle);
-            Controls.Add(buttonAlimentar);
-            Controls.Add(buttonSonido);
+            Controls.Add(listBoxListaAnimales);
+            Controls.Add(buttonRegresar);
             Name = "FormVisualizarAnimal";
             Text = "FormVisualizarAnimal";
+            Load += FormVisualizarAnimal_Load;
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Button buttonSonido;
-        private Button buttonAlimentar;
-        private Button buttonDetalle;
+        private Button buttonRegresar;
+        private ListBox listBoxListaAnimales;
     }
 }

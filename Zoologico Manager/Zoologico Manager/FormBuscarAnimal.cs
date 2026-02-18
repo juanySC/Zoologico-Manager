@@ -10,9 +10,20 @@ namespace Zoologico_Manager
 {
     public partial class FormBuscarAnimal : Form
     {
-        public FormBuscarAnimal()
+
+       
+        public FormBuscarAnimal(   )
         {
             InitializeComponent();
+            
+        }
+
+        private void buttonRegresar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            //regreso al formulario principal
+            Form1 formPrincipal2 = new Form1();
+            formPrincipal2.Show();
         }
     }
 }

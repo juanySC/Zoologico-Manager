@@ -28,12 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FormBuscarAnimal";
+            buttonRegresar = new Button();
+            SuspendLayout();
+            // 
+            // buttonRegresar
+            // 
+            buttonRegresar.BackColor = SystemColors.MenuHighlight;
+            buttonRegresar.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttonRegresar.Location = new Point(419, 370);
+            buttonRegresar.Name = "buttonRegresar";
+            buttonRegresar.Size = new Size(129, 42);
+            buttonRegresar.TabIndex = 0;
+            buttonRegresar.Text = "Regresar";
+            buttonRegresar.UseVisualStyleBackColor = false;
+            buttonRegresar.Click += buttonRegresar_Click;
+            // 
+            // FormBuscarAnimal
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(buttonRegresar);
+            Name = "FormBuscarAnimal";
+            Text = "FormBuscarAnimal";
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Button buttonRegresar;
     }
 }
