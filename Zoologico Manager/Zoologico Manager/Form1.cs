@@ -44,7 +44,21 @@ namespace Zoologico_Manager
 
             string tipo = comboBoxTipoAnimal.SelectedItem.ToString();
             string nombre = textBoxNombreAnimal.Text;
-            int edad = Convert.ToInt32(textBoxEdadAnimal.Text);
+
+            //excepcion para que no se pueda ingresar un valor no numerico en el campo de edad
+            if (!int.TryParse(textBoxEdadAnimal.Text, out int edad))
+            {
+                //el limite maximo para la edad es 25 años para evitar que se ingresen edades poco realistas
+                if (edad >0 || edad < 25)
+                {
+                    MessageBox.Show("Por favor, ingrese una edad válida entre 0 y 25 años.");
+                    return;
+                }
+
+                MessageBox.Show("Por favor, ingrese un valor numérico válido para la edad.");
+                return;
+            }
+           // int edad = Convert.ToInt32(textBoxEdadAnimal.Text);
 
             //creo el animal dependiendo del tipo seleccionado
             Animal nuevoAnimal = null;
@@ -100,7 +114,8 @@ namespace Zoologico_Manager
         private void buttonBuscarAnimal_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormBuscarAnimal formBuscarAnimal = new FormBuscarAnimal();
+            //pasando el vector real 
+            FormBuscarAnimal formBuscarAnimal = new FormBuscarAnimal(animales, contadorAnimales);
             formBuscarAnimal.Show();
         }
 
