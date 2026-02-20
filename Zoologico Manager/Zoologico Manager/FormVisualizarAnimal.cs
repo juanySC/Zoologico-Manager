@@ -83,7 +83,27 @@ namespace Zoologico_Manager
                 int indiceSeleccionado = listBoxListaAnimales.SelectedIndex;
                 labelCambioSonido.Text = listaAnimales[indiceSeleccionado].EmitirSonido();
             }
-            else 
+            else
+            {
+                MessageBox.Show("No se ha seleccionado ningún animal");
+            }
+        }
+
+        private void buttonDetalles_Click(object sender, EventArgs e)
+        {
+            //actualizare los labels para mostrar los detalles del animal seleccionado
+            if (listBoxListaAnimales.SelectedIndex != -1)
+            {
+                int indiceSeleccionado = listBoxListaAnimales.SelectedIndex;
+                //cambio todos los labels 
+                Animal animal = listaAnimales[indiceSeleccionado];
+                labelMostrarTipo.Text = animal.GetType().Name;
+                labelMostrarNombre.Text = animal.Nombre;
+                labelMostrarEdad.Text = animal.Edad.ToString();
+                labelMostrarSalud.Text = animal.Salud.ToString();
+                labelMostrarHambre.Text = animal.Hambre.ToString();
+            }
+            else
             {
                 MessageBox.Show("No se ha seleccionado ningún animal");
             }
