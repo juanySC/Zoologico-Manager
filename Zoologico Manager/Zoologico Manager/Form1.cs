@@ -42,23 +42,32 @@ namespace Zoologico_Manager
                 return;
             }
 
+            
+
             string tipo = comboBoxTipoAnimal.SelectedItem.ToString();
             string nombre = textBoxNombreAnimal.Text;
+
+            //char.IsLetter me ayuda a validar que solo sea letras lo que tenga en ese campo
+            if (!nombre.All(char.IsLetter)) 
+            { 
+                MessageBox.Show("Por favor, ingrese un nombre válido que solo contenga letras.");
+                return;
+            }
 
             //excepcion para que no se pueda ingresar un valor no numerico en el campo de edad
             if (!int.TryParse(textBoxEdadAnimal.Text, out int edad))
             {
-                //el limite maximo para la edad es 25 años para evitar que se ingresen edades poco realistas
-                if (edad >0 || edad < 25)
-                {
-                    MessageBox.Show("Por favor, ingrese una edad válida entre 0 y 25 años.");
-                    return;
-                }
-
                 MessageBox.Show("Por favor, ingrese un valor numérico válido para la edad.");
                 return;
             }
-           // int edad = Convert.ToInt32(textBoxEdadAnimal.Text);
+
+            //el limite maximo para la edad es 25 años para evitar que se ingresen edades poco realistas
+            if (edad < 1 || edad >  25)
+            {
+                MessageBox.Show("Por favor, ingrese una edad válida entre 0 y 25 años.");
+                return;
+            }
+            // int edad = Convert.ToInt32(textBoxEdadAnimal.Text);
 
             //creo el animal dependiendo del tipo seleccionado
             Animal nuevoAnimal = null;

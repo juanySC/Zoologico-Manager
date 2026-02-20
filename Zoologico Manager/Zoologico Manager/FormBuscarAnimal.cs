@@ -34,10 +34,32 @@ namespace Zoologico_Manager
 
         private void buttonBuscarAnimal_Click(object sender, EventArgs e)
         {
+
             listBoxResultadoBuscar.Items.Clear();
 
             string tipoBusqueda = comboBoxRecibirTipo.SelectedItem?.ToString();
             string nombreBusqueda = textBoxRecibirNombre.Text.Trim(); //ignora espacios par abuscar lo mas parecido
+            //hago validaciones como que se halla seleccionado un tipo 
+
+            if (comboBoxRecibirTipo.SelectedItem == null)
+            {
+                MessageBox.Show("Por favor, seleccione un tipo de animal o ingrese un nombre para buscar.");
+                return;
+            }
+
+            //para el nombre entonces le hago validaxion para que solo acepte letras
+            if (textBoxRecibirNombre.Text == "") 
+            {
+                MessageBox.Show("Por favor, ingrese un nombre para buscar o seleccione un tipo de animal.");
+            }
+
+            if (!nombreBusqueda.All(char.IsLetter))
+            {
+                MessageBox.Show("El nombre solo debe contener letras.");
+                return;
+            }
+
+           
 
             //bandera
             bool encontrar = false;
